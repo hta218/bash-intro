@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+### Local variables
 # Declare a variable with = sign
 foo="foooo"
 echo "foo is \"$foo\""
@@ -14,3 +15,9 @@ echo "After \`unset foo\`. foo is \"$foo\""
 bar="bazz"
 echo "bar is \"$bar\""
 echo 'bar is "$bar"'
+
+### Environment variables
+export GLOBA_VAR="This is a global variable"
+
+### Challenge
+echo "User $USER in directory $PWD."
