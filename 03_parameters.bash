@@ -13,3 +13,8 @@ echo "The script has $# positional parameters"
 echo "All positional parameters are \"$*\""
 echo "The 1st positional parameter is \"$1\""
 echo "The 2nd positional parameter is \"$2\""
+
+### Default values
+THIRD_PARAM=$3
+THIRD_PARAM=${THIRD_PARAM:-'This is the default value of the 3rd param if it is not existed!'}
+echo "The 3rd positional parameter is \"$THIRD_PARAM\""
