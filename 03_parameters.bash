@@ -18,3 +18,8 @@ echo "The 2nd positional parameter is \"$2\""
 THIRD_PARAM=$3
 THIRD_PARAM=${THIRD_PARAM:-'This is the default value of the 3rd param if it is not existed!'}
 echo "The 3rd positional parameter is \"$THIRD_PARAM\""
+
+### Challenge
+# echo "1: $1"
+# echo "3: $3"
+# echo "5: $5"
