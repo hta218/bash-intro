@@ -8,5 +8,8 @@ planets[2]="Earth"
 echo ${planets[*]}
 
 # Or array can be created by using the array() function:
-planets=(Mercury Venus Earth)
+planets=(Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto)
 echo ${planets[@]}
+
+# Slice an array with array[*]:start:length
+echo "3 planets start from the 2nd one are: ${planets[*]:1:3}"
