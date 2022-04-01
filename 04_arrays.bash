@@ -11,7 +11,8 @@ echo "The 3 first planets in the solar system are: ${planets[*]}"
 planets=(Mercury Venus Earth Mars Jupiter Saturn)
 echo "The 6 first planets in the solar system are: ${planets[@]}"
 
-# Slice an array with array[*]:start:length
+# Slice an array with ${array[*]:start:length}
+# Or ${*:start:length} -> slice of the positional parameters
 echo "The 3 planets start from the 2nd one are: ${planets[*]:1:3}"
 
 # Add elements to an array:
@@ -21,3 +22,12 @@ echo "All planets in the solar system are: ${planets[*]}"
 # Delete an element from an array with `unset`:
 unset planets[0]
 echo "All planets in the solar system except the first one are: ${planets[*]}"
+
+### Challenge
+arr=($*)
+arr=(${arr[*]:1:2})
+arr=(I am ${arr[*]})
+arr=(${arr[*]} and $4)
+# Or
+arr=(I am ${*:2:2} and $4)
+echo "${arr[*]}"
