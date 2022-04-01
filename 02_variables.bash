@@ -5,6 +5,9 @@
 foo="foooo"
 echo "foo is \"$foo\""
 
+foo="new foooo"
+echo "new foo is \"$foo\""
+
 # Delete the variable
 unset foo
 echo "After \`unset foo\`. foo is \"$foo\""
