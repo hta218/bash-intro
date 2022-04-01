@@ -18,3 +18,9 @@ echo "Now: $now"
 # Or
 this_moment=`date +%T`
 echo "This moment: $this_moment"
+
+### Arithmetic expansion
+# Arithmetic expansion is a feature of bash that allows you to perform arithmetic operations on variables.
+# Syntax: $(( expression ))
+echo "10 + 5 = $(( 10+5 ))"
+echo "6 + (10 * 2) / 5 = $(( 6 + (10 * 2) / 5 ))"
