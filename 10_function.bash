@@ -27,25 +27,22 @@
 
 ### Challenge
 print() {
+  [[ $1 -ge $2 ]] && return
   i=$1
-  level=0
-  while [[ $i -lt $2 ]]; do
-    if [[ $(($i % 2)) == 0 ]]; then
-      level=$(( $level + 1 ))
-      j=0
-      while [[ $j -lt $level ]]; do
-        echo -n " "
-        j=$(( $j + 1 ))
-      done
-      echo "$i"
-    fi
-    i=$(( $i + 1 ))
-  done
+  if [[ $(($i % 2)) == 0 ]]; then
+    indent=$(($3 + 1))
+    for ((j = 0; j < $indent; j++)); do
+      echo -n " "
+    done
+    echo "$i"
+  fi
+
+  print $(($i + 1)) $2 indent
 }
 
 main() {
   echo $FUNCNAME
-  print $1 $2
+  print $1 $2 0
 }
 
 main $1 $2
