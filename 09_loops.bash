@@ -49,6 +49,29 @@ for i in {1..20}; do
   echo $i
 done
 
+### Select loop
+echo "select loop"
+# The PS3 variable is used to set the prompt string. 
+# Or else, it will be "#? " (try comment the PS3 line to see)
+PS3="Choose your favorite position in a football team: "
+select position in "Goalkeeper" "Defender" "Midfielder" "Forward"
+do
+  case $position in
+    "Goalkeeper")
+      echo "Catch the ball with your hand!"
+      ;;
+    "Defender")
+      echo "Protect the goal!"
+      ;;
+    "Midfielder")
+      echo "Control the match!"
+      ;;
+    "Forward")
+      echo "Score as many goal as possible!"
+      ;;
+  esac
+  break # avoid infinite loop
+done
 
 ### Challenge
 c=$1
