@@ -7,5 +7,8 @@
 # Use $ to print a variable
 echo "Hello, world! It's $(whoami) on $(hostname)!"
 
+# Using `man` command to view a system’s reference manuals (man pages)
+# https://www.educative.io/edpresso/what-is-the-man-command-in-linux
+
 ### Challenge
 echo "Hello, world!"
