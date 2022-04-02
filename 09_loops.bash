@@ -16,12 +16,12 @@ done
 #   mv "$file" "text/"
 # done
 
-### while loop
+## while loop
 echo "while loop"
 x=0
 while [[ $x -lt 10 ]]; do
   echo $(( $x * $x ))
-  x=`expr $x + 1`
+  x=$(( $x + 1 ))
 done
 
 ### until loop
@@ -30,4 +30,11 @@ x=10
 until [[ x -lt 5 ]]; do
   echo $(( $x * $x ))
   x=`expr $x - 1`
+done
+
+### Challenge
+c=$1
+while [[ $c -lt $2 ]]; do
+  [[ $(( $c % 2 )) == 0 ]] && echo $c
+  c=$(( $c + 1 ))
 done
