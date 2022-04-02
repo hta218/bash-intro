@@ -6,3 +6,21 @@ my_func () {
 }
 
 my_func
+
+# Function parameters
+greeting () {
+  local foo="Foooo" # Local variables are only available in the function
+  bar="Bazzz"
+  if [[ $1 ]]; then
+    echo "Hello, $1"
+  else
+    echo "Hello, the unknown!"
+  fi
+  return 0
+}
+
+greeting "John"
+greeting
+
+echo "foo is: $foo"
+echo "baz is: $bar"
