@@ -32,6 +32,24 @@ until [[ x -lt 5 ]]; do
   x=`expr $x - 1`
 done
 
+### Loop control with `break` and `continue`
+echo "Loop control with continue"
+for i in {1..20}; do
+  if [[ ! $(( $i % 5 )) -eq 0 ]]; then
+    continue
+  fi
+  echo $i
+done
+
+echo "Loop control with break"
+for i in {1..20}; do
+  if [[ $i == 10 ]]; then
+    break
+  fi
+  echo $i
+done
+
+
 ### Challenge
 c=$1
 while [[ $c -lt $2 ]]; do
