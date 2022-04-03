@@ -1,0 +1,27 @@
+{
+  "version": "0.5.39",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --outDir dist --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts --outDir dist",
+    "prepublish": "npm run build"
+  },
+  "name": "test",
+  "author": "test",
+  "dependencies": {
+    "react": "18.0.0"
+  }
+}
